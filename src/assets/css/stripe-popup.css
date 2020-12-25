@@ -1,0 +1,72 @@
+.pay-popup-curtain {
+	position: fixed;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: #0006;
+	z-index: 3000;
+}
+
+@keyframes zoom-in {
+	from {
+		transform: scale(0);
+	}
+
+	to {
+		transform: scale(1);
+	}
+}
+
+.pay-popup-curtain .pay-container {
+	padding: 20px 40px;
+	width: 100%;
+	max-width: 560px;
+	border-radius: 4px;
+	background-color: #fff;
+	animation: zoom-in 0.3s ease-out;
+}
+
+.pay-container * {
+	font-size: 14px;
+	color: #333;
+}
+
+.card-element-cont {
+	padding: 8px 10px;
+	border: 1px solid #bdbdbd;
+}
+
+.button-row {
+	padding-top: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.pay-button {
+	padding: 10px 20px;
+	min-width: 120px;
+	outline: none;
+	border: none;
+	border-radius: 4px;
+	color: #fff;
+	background-color: #2196F3;
+	cursor: pointer;
+}
+
+.pay-button.disabled {
+	background-color: #ccc;
+	cursor: not-allowed;
+}
+
+.pay-button:hover {
+	opacity: 0.75;
+}
+
+.pay-container .error-message {
+	font-style: italic;
+	color: #873C23;
+}
